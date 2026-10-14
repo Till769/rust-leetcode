@@ -1,4 +1,5 @@
 pub mod p0084_largest_rectangle_in_histogram;
+pub mod p0232_implement_queue_using_stacks;
 pub mod p0739_daily_temperatures;
 pub mod p1700_number_of_students_unable_to_eat_lunch;
 pub mod p2073_time_needed_to_buy_tickets;
