@@ -1,10 +1,30 @@
+use std::{
+    cmp::Reverse,
+    collections::{BinaryHeap, HashSet},
+};
+
 // 373. Find K Pairs with Smallest Sums (Medium)
 // https://leetcode.com/problems/find-k-pairs-with-smallest-sums/
 pub struct Solution;
 
 impl Solution {
     pub fn k_smallest_pairs(nums1: Vec<i32>, nums2: Vec<i32>, k: i32) -> Vec<Vec<i32>> {
-        todo!()
+        let mut set: HashSet<(usize, usize)> = HashSet::new();
+        let mut heap: BinaryHeap<Reverse<(i32, usize, usize)>> = BinaryHeap::new();
+        let mut ans: Vec<Vec<i32>> = Vec::with_capacity(k as usize);
+        set.insert((0, 0));
+        heap.push(Reverse((nums1[0] + nums2[0], 0, 0)));
+        for _ in 0..k {
+            let Reverse((_, i, j)) = heap.pop().unwrap();
+            ans.push(vec![nums1[i], nums2[j]]);
+            if i + 1 < nums1.len() && set.insert((i + 1, j)) {
+                heap.push(Reverse((nums1[i + 1] + nums2[j], i + 1, j)));
+            }
+            if j + 1 < nums2.len() && set.insert((i, j + 1)) {
+                heap.push(Reverse((nums1[i] + nums2[j + 1], i, j + 1)));
+            }
+        }
+        ans
     }
 }
 
