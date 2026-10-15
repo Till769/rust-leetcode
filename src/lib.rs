@@ -1,5 +1,6 @@
 pub mod p0084_largest_rectangle_in_histogram;
 pub mod p0232_implement_queue_using_stacks;
+pub mod p0373_find_k_pairs_with_smallest_sums;
 pub mod p0739_daily_temperatures;
 pub mod p1046_last_stone_weight;
 pub mod p1700_number_of_students_unable_to_eat_lunch;
