@@ -5,3 +5,4 @@ pub mod p0739_daily_temperatures;
 pub mod p1046_last_stone_weight;
 pub mod p1700_number_of_students_unable_to_eat_lunch;
 pub mod p2073_time_needed_to_buy_tickets;
+pub mod p1354_construct_target_array_with_multiple_sums;
