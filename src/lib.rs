@@ -9,3 +9,4 @@ pub mod p1354_construct_target_array_with_multiple_sums;
 pub mod p0520_detect_capital;
 pub mod p0482_license_key_formatting;
 pub mod p0831_masking_personal_information;
+pub mod p0459_repeated_substring_pattern;
