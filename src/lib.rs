@@ -12,3 +12,4 @@ pub mod p0831_masking_personal_information;
 pub mod p0459_repeated_substring_pattern;
 pub mod p0796_rotate_string;
 pub mod p0686_repeated_string_match;
+pub mod p0083_remove_duplicates_from_sorted_list;
